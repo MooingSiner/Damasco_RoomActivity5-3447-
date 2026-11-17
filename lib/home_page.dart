@@ -1,13 +1,31 @@
 import 'package:flutter/material.dart';
- 
+import 'demo_auth.dart';
+import 'login_screen.dart';
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
  
+ void logout(BuildContext context) {
+    DemoAuth.logout();
+ 
+Navigator.of(context).pushAndRemoveUntil(
+  MaterialPageRoute(
+    builder: (context) => const LoginScreen(),
+  ),
+  (route) => false,
+);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home'),
+         actions: [
+          IconButton(
+            icon: const Icon(Icons.logout),
+            onPressed: () => logout(context),
+          ),
+        ],
       ),
       body: ListView(
         padding: const EdgeInsets.all(24),
