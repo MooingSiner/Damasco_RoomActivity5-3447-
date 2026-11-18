@@ -23,11 +23,10 @@ class DemoAuth {
   static void register(String username, String password) {
     registeredUsername = username;
     registeredPassword = password;
-    
   }
-  
  
   static void logout() {
     currentUsername = null;
   }
 }
+ 

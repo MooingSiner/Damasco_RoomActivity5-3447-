@@ -3,7 +3,8 @@ import 'login_screen.dart';
  
 void main() {
   runApp(const StudentApp());
-}
+  }
+
  
 class StudentApp extends StatelessWidget {
   const StudentApp({super.key});

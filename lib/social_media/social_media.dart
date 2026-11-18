@@ -31,21 +31,21 @@ class _SocialMediaPageState extends State<SocialMediaPage> {
   ];
  
   Future<void> openCreatePostSheet() async {
-    final Post? newPost = await showModalBottomSheet<Post>(
+        final Post? newPost = await showModalBottomSheet<Post>(
       context: context,
       isScrollControlled: true,
       useSafeArea: true,
-      builder: (BuildContext context) {
+      builder: (context) {
         return CreatePostSheet(
           username: widget.username,
         );
       },
     );
- 
+    
     if (!mounted || newPost == null) {
       return;
     }
- 
+    
     setState(() {
       posts.insert(0, newPost);
     });

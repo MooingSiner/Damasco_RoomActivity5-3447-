@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
  
-class CalculatorScreen extends StatefulWidget {
+class CalculatorScreen extends StatefulWidget{
   const CalculatorScreen({super.key});
  
   @override
