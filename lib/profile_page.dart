@@ -68,7 +68,7 @@ class ProfilePage extends StatelessWidget {
                 ListTile(
                   leading: Icon(Icons.school),
                   title: Text('Course and Section'),
-                  subtitle: Text('BSIT 3447'),
+                  subtitle: Text('CCE106L 3447'),
                 ),
                 ListTile(
                   leading: Icon(Icons.email),
